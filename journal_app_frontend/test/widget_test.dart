@@ -3,16 +3,12 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:journal_app_frontend/main.dart';
 
 void main() {
-  testWidgets('App generation message displayed', (WidgetTester tester) async {
-    await tester.pumpWidget(const MyApp());
+  testWidgets('App shows Ocean Journal title', (WidgetTester tester) async {
+    await tester.pumpWidget(const OceanJournalApp());
+    // Allow first frame
+    await tester.pump();
 
-    expect(find.text('journal_app_frontend App is being generated...'), findsOneWidget);
-    expect(find.byType(CircularProgressIndicator), findsOneWidget);
-  });
-
-  testWidgets('App bar has correct title', (WidgetTester tester) async {
-    await tester.pumpWidget(const MyApp());
-
-    expect(find.text('journal_app_frontend'), findsOneWidget);
+    expect(find.text('Ocean Journal'), findsOneWidget);
+    expect(find.byType(AppBar), findsOneWidget);
   });
 }

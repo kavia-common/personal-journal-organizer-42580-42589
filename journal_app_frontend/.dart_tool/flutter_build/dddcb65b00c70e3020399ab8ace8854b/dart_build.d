@@ -1,0 +1,1 @@
+ /home/kavia/workspace/code-generation/personal-journal-organizer-42580-42589/journal_app_frontend/.dart_tool/flutter_build/dddcb65b00c70e3020399ab8ace8854b/dart_build_result.json: 
